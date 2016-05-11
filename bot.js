@@ -2,9 +2,11 @@ var Discordie = require('discordie');
 
 const Events = Discordie.Events;
 const client = new Discordie();
+const Config = require('./config.js');
+var mytoken = Config.token;
 
 client.connect({
-	token: 'MTc5NzUzMDk1OTg1NjI3MTM3.ChQPnQ.wbT9aedbH7Rj1izEvrpFmPTupes'
+	token: mytoken
 });
 
 client.Dispatcher.on(Events.GATEWAY_READY, e => {
@@ -16,7 +18,7 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 	if(incoming_text == '!vvvc') {
 		e.message.channel.sendMessage('COOL!');
 	// Mark Nickerson, our hero
-	} else if(incoming_text == '!mark' or incoming_text == '!tank') {
+	} else if(incoming_text == '!mark' || incoming_text == '!tank') {
 		e.message.channel.sendMessage('https://cdn.discordapp.com/attachments/179217823657230336/179321029326405643/unknown.png');	
 	// VA - Attack
 	} else if(incoming_text == '!va1') {
