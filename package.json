@@ -1,0 +1,26 @@
+{
+  "name": "vafbot",
+  "version": "1.0.0",
+  "description": "Nude. Tayne.",
+  "main": "bot.js",
+  "scripts": {
+    "test": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cstabb/vafbot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "node.js",
+    "tayne",
+    "vaf"
+  ],
+  "author": "VAF",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cstabb/vafbot/issues"
+  },
+  "homepage": "https://github.com/cstabb/vafbot#readme"
+}
