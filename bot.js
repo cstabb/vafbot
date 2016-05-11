@@ -337,7 +337,7 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 	} else if(incoming_text.substring(0,1) == '!') {
 		var snark = [
 			'Good morning, Paul. What will your first sequence of the day be?',
-			'I can\t wait to entertayne you.',
+			'I can\'t wait to entertayne you.',
 		    'Can I see a hat wobble?',
 		    'Can I see a Flarhgunnstow?',
 		    'Can you kick up the 4D3D3D3?',
