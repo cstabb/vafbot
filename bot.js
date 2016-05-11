@@ -336,8 +336,15 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 	// Snark inc
 	} else if(incoming_text.substring(0,1) == '!') {
 		var snark = [
-		    'Don\'t tell me how to feel!',
-		    'Don\'t tell me how to think!'
+			'Good morning, Paul. What will your first sequence of the day be?',
+			'I can\t wait to entertayne you.',
+		    'Can I see a hat wobble?',
+		    'Can I see a Flarhgunnstow?',
+		    'Can you kick up the 4D3D3D3?',
+		    'add sequence: OYSTER',
+		    'Give me a print-out of Oyster smiling.',
+		    'Nude. Tayne.',
+		    'We have important work to do.'
 		];
 		var rando_snark = Math.floor(Math.random()*snark.length);
 		e.message.channel.sendMessage(snark[rando_snark]);
