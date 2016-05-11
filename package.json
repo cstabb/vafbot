@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/cstabb/vafbot/issues"
   },
-  "homepage": "https://github.com/cstabb/vafbot#readme"
+  "homepage": "https://github.com/cstabb/vafbot#readme",
+  "dependencies": {
+    "discordie": "^0.6.1"
+  }
 }
