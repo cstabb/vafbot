@@ -16,7 +16,7 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 	if(incoming_text == '!vvvc') {
 		e.message.channel.sendMessage('COOL!');
 	// Mark Nickerson, our hero
-	} else if(incoming_text == '!mark' or incoming_text == '!tank') {
+	} else if(incoming_text == '!mark' || incoming_text == '!tank') {
 		e.message.channel.sendMessage('https://cdn.discordapp.com/attachments/179217823657230336/179321029326405643/unknown.png');	
 	// VA - Attack
 	} else if(incoming_text == '!va1') {
