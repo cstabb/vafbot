@@ -2,9 +2,11 @@ var Discordie = require('discordie');
 
 const Events = Discordie.Events;
 const client = new Discordie();
+const Config = require('./config.js');
+var mytoken = Config.token;
 
 client.connect({
-	token: 'MTc5NzUzMDk1OTg1NjI3MTM3.ChQPnQ.wbT9aedbH7Rj1izEvrpFmPTupes'
+	token: mytoken
 });
 
 client.Dispatcher.on(Events.GATEWAY_READY, e => {
