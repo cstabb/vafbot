@@ -20,7 +20,7 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 		e.message.channel.sendMessage('COOL!');
 	// Mark Nickerson, our hero
 	} else if(incoming_text == '!mark' || incoming_text == '!tank') {
-		e.message.channel.uploadFile("tank.png"); // File
+		e.message.channel.uploadFile("img/tank.png"); // File
 	// VA - Attack
 	} else if(incoming_text == '!va1') {
 			e.message.channel.sendMessage('Attack left lane!');	
