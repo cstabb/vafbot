@@ -353,7 +353,6 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 		];
 		var rando_batz = Math.floor(Math.random()*hun_batz.length);
 		e.message.channel.sendMessage(hun_batz[rando_batz]);
-	}
 	// Snark inc
 	} else if(incoming_text.substring(0,1) == '!') {
 		var snark = [
