@@ -18,6 +18,8 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 	var incoming_text = e.message.content;
 	if(incoming_text == '!vvvc') {
 		e.message.channel.sendMessage('COOL!');
+	} else if(incoming_text == '!naptime')  {
+		e.message.channel.uploadFile("img/billynap.gif"); // File
 	// Mark Nickerson, our hero
 	} else if(incoming_text == '!mark' || incoming_text == '!tank') {
 		e.message.channel.uploadFile("img/tank.png"); // File
