@@ -3,6 +3,7 @@ var Discordie = require('discordie');
 const Events = Discordie.Events;
 const client = new Discordie();
 const Config = require('./config.js');
+const fs = require('fs');
 var mytoken = Config.token;
 
 client.connect({
@@ -19,7 +20,7 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 		e.message.channel.sendMessage('COOL!');
 	// Mark Nickerson, our hero
 	} else if(incoming_text == '!mark' || incoming_text == '!tank') {
-		e.message.channel.sendMessage('https://cdn.discordapp.com/attachments/179217823657230336/179321029326405643/unknown.png');	
+		e.message.channel.uploadFile("img/tank.png"); // File
 	// VA - Attack
 	} else if(incoming_text == '!va1') {
 			e.message.channel.sendMessage('Attack left lane!');	
