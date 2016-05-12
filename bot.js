@@ -344,7 +344,7 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 			'It is not good to remove the first layer of the tortillas, or pimples will appear on your face.'
 		];
 		var rando_batz = Math.floor(Math.random()*hun_batz.length);
-		e.message.channel.sendMessage(snark[rando_batz]);
+		e.message.channel.sendMessage(hun_batz[rando_batz]);
 	} else if(incoming_text == '!vet') {
 		var hun_batz = [
 			'It is not wise to put a basket on your head or you will be eaten by a dog.',
@@ -352,8 +352,7 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 			'Do not throw away your hair, fingernails or teeth because if you don\'t find them upon your death, you will regret it.'
 		];
 		var rando_batz = Math.floor(Math.random()*hun_batz.length);
-		e.message.channel.sendMessage(snark[rando_batz]);
-	}
+		e.message.channel.sendMessage(hun_batz[rando_batz]);
 	// Snark inc
 	} else if(incoming_text.substring(0,1) == '!') {
 		var snark = [
