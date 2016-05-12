@@ -336,6 +336,24 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 			e.message.channel.sendMessage('Place a Ward for teleport!');	
 	} else if(incoming_text == '!vvvx') {
 			e.message.channel.sendMessage('Spread Out!');
+	//VE - Self			
+	} else if(incoming_text == '!vej') {
+		var hun_batz = [
+			'It is not good to point at a rainbow, or your finger will rot!',
+			'It is not good to hit a dog, for he will no longer help you in case you need to pass the flames of a fire.',
+			'It is not good to remove the first layer of the tortillas, or pimples will appear on your face.'
+		];
+		var rando_batz = Math.floor(Math.random()*hun_batz.length);
+		e.message.channel.sendMessage(hun_batz[rando_batz]);
+	} else if(incoming_text == '!vet') {
+		var hun_batz = [
+			'It is not wise to put a basket on your head or you will be eaten by a dog.',
+			'One finger cannot remove lice from the head.',
+			'Do not throw away your hair, fingernails or teeth because if you don\'t find them upon your death, you will regret it.'
+		];
+		var rando_batz = Math.floor(Math.random()*hun_batz.length);
+		e.message.channel.sendMessage(hun_batz[rando_batz]);
+	}
 	// Snark inc
 	} else if(incoming_text.substring(0,1) == '!') {
 		var snark = [
