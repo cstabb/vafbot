@@ -10,9 +10,9 @@
 
 Important Locations
 ======
-https://github.com/cstabb/vafbot
-https://console.ng.bluemix.net/
-https://nodejs.org/en/
+[Github Repository](https://github.com/cstabb/vafbot)
+[IBM Bluemix](https://console.ng.bluemix.net/)
+[Node JS](https://nodejs.org/en/)
 
 Setup
 ======
