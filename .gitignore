@@ -1,3 +1,4 @@
 config.js
 *.db
 config.json
+npm-debug.log

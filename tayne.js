@@ -17,7 +17,7 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 	var incoming_text = e.message.content;
 	var found = false;
 	if(incoming_text == '!vvvc') {
-		sendMessage('COOL!');
+		sendMessage(e, 'COOL!');
 		found = true;
 	} else if(incoming_text == '!naptime')  {
 		e.message.channel.uploadFile("img/billynap.gif"); // File
@@ -32,12 +32,12 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 	vgs = require('./vgs.js');
 	vgsMessage = vgs(incoming_text);
 	if(vgsMessage.message != false) {
-		sendMessage(vgsMessage.message);
+		sendMessage(e, vgsMessage.message);
 		found = true;
 	}
 	// Go back in time
 	if(incoming_text == '!killyourself') {
-		e.message.channel.sendMessage('Going back in time, brb.');
+		sendMessage(e, 'Going back in time, brb.');
 		client.disconnect();
 		found = true;
 	}
@@ -55,24 +55,24 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 		    'We have important work to do.'
 		];
 		var rando_snark = Math.floor(Math.random()*snark.length);
-		sendMessage(snark[rando_snark]);
+		sendMessage(e, snark[rando_snark]);
 	}
 });
 
 client.Dispatcher.on("VOICE_CHANNEL_JOIN", e => {
 	console.log("New Event: VOICE_CHANNEL_JOIN");
 
-	sendMessage("Oh hi " + e.user.username);
+	sendMessage(e, "Oh hi " + e.user.username);
 });
 
 
 client.Dispatcher.on("VOICE_CHANNEL_LEAVE", e => {
 	console.log("New Event: VOICE_CHANNEL_LEAVE");
 
-	sendMessage("See ya never, " + e.user.username);
+	sendMessage(e, "See ya never, " + e.user.username);
 });
 
-function sendMessage(text) {
+function sendMessage(obj, text) {
 	console.log(text);
-	e.message.channel.sendMessage(text);
+	obj.message.channel.sendMessage(text);
 }
