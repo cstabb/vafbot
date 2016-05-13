@@ -61,15 +61,13 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 
 client.Dispatcher.on("VOICE_CHANNEL_JOIN", e => {
 	console.log("New Event: VOICE_CHANNEL_JOIN");
-
-	sendMessage(e, "Oh hi " + e.user.username);
+	console.log("Oh hi " + e.user.username);
 });
 
 
 client.Dispatcher.on("VOICE_CHANNEL_LEAVE", e => {
 	console.log("New Event: VOICE_CHANNEL_LEAVE");
-
-	sendMessage(e, "See ya never, " + e.user.username);
+	console.log("See ya never, " + e.user.username);
 });
 
 function sendMessage(obj, text) {
