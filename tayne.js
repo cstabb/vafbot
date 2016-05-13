@@ -9,8 +9,6 @@ client.Dispatcher.on("GATEWAY_READY", e => {
 	console.log('Hey, I\'m ' + client.User.username + ', your latest dancer. I can\'t wait to entertain you.');
 });
 
-var butts = "BUTTSLOL";
-
 client.Dispatcher.on("MESSAGE_CREATE", e => {
 	var incoming_text = e.message.content;
 	if(incoming_text == '!vvvc') {
