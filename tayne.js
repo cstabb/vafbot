@@ -55,3 +55,6 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 	}
 });
 
+client.Dispatcher.on("VOICE_CHANNEL_LEAVE", e => {
+	e.message.channel.sendMessage("See ya never, " + e.user.username);
+});
