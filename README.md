@@ -11,7 +11,9 @@
 Important Locations
 ======
 [Github Repository](https://github.com/cstabb/vafbot)
+
 [IBM Bluemix](https://console.ng.bluemix.net/)
+
 [Node JS](https://nodejs.org/en/)
 
 Setup
