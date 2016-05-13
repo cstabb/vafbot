@@ -2,14 +2,14 @@ var Discordie = require("discordie");
 var client = new Discordie();
 
 var Config = require("./config.json");
-var botToken = Config.botToken;
-client.connect({ token: botToken });
+var token = Config.token;
+client.connect({ token: token });
 
 client.Dispatcher.on("GATEWAY_READY", e => {
 	console.log('Hey, I\'m ' + client.User.username + ', your latest dancer. I can\'t wait to entertain you.');
 });
 
-client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
+client.Dispatcher.on("MESSAGE_CREATE", e => {
 	var incoming_text = e.message.content;
 	if(incoming_text == '!vvvc') {
 		e.message.channel.sendMessage('COOL!');
