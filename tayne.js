@@ -6,14 +6,18 @@ var token = Config.token;
 client.connect({ token: token });
 
 client.Dispatcher.on("GATEWAY_READY", e => {
+	console.log("New Event: GATEWAY_READY");
 	console.log('Hey, I\'m ' + client.User.username + ', your latest dancer. I can\'t wait to entertain you.');
 });
 
 client.Dispatcher.on("MESSAGE_CREATE", e => {
+	console.log("New Event: MESSAGE_CREATE");
+	console.log(">(" + e.message.timestamp + ") " + e.message.author.username + ": " + e.message.content);
+
 	var incoming_text = e.message.content;
 	var found = false;
 	if(incoming_text == '!vvvc') {
-		e.message.channel.sendMessage('COOL!');
+		sendMessage('COOL!');
 		found = true;
 	} else if(incoming_text == '!naptime')  {
 		e.message.channel.uploadFile("img/billynap.gif"); // File
@@ -28,7 +32,7 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 	vgs = require('./vgs.js');
 	vgsMessage = vgs(incoming_text);
 	if(vgsMessage.message != false) {
-		e.message.channel.sendMessage(vgsMessage.message);
+		sendMessage(vgsMessage.message);
 		found = true;
 	}
 	// Go back in time
@@ -51,10 +55,24 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 		    'We have important work to do.'
 		];
 		var rando_snark = Math.floor(Math.random()*snark.length);
-		e.message.channel.sendMessage(snark[rando_snark]);
+		sendMessage(snark[rando_snark]);
 	}
 });
 
-client.Dispatcher.on("VOICE_CHANNEL_LEAVE", e => {
-	e.message.channel.sendMessage("See ya never, " + e.user.username);
+client.Dispatcher.on("VOICE_CHANNEL_JOIN", e => {
+	console.log("New Event: VOICE_CHANNEL_JOIN");
+
+	sendMessage("Oh hi " + e.user.username);
 });
+
+
+client.Dispatcher.on("VOICE_CHANNEL_LEAVE", e => {
+	console.log("New Event: VOICE_CHANNEL_LEAVE");
+
+	sendMessage("See ya never, " + e.user.username);
+});
+
+function sendMessage(text) {
+	console.log(text);
+	e.message.channel.sendMessage(text);
+}
