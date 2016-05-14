@@ -33,15 +33,23 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 
 	// !naptime
 	// Billy takes a dirt nap
-	if(incoming_text == "!naptime")  {
+	if(incoming_text == "!naptime") {
 		e.message.channel.uploadFile("resources/img/billynap.gif"); // File
 		return;
 	}
 
 	// !same
 	// Same!
-	if(incoming_text == "!same")  {
+	if(incoming_text == "!same") {
 		e.message.channel.uploadFile("resources/img/same.gif"); // File
+		return;
+	}
+
+	// !smite-random [tag] [tag] [tag] ...
+	// Choose a random Smite god based on desired tags
+	// Valid tags are pantheon, attack type (melee, ranged), power type (physical, magical), class (mage, hunter, warrior, guardian, assassin)
+	if(incoming_text.startsWith("!smite")) {
+		console.log("SMITE!");
 		return;
 	}
 
@@ -90,4 +98,8 @@ client.Dispatcher.on("VOICE_CHANNEL_LEAVE", e => {
 
 function sendMessage(obj, text) {
 	obj.message.channel.sendMessage(text);
+}
+
+String.prototype.startsWith = function(prefix) {
+    return this.indexOf(prefix) === 0;
 }
