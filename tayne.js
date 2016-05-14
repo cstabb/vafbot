@@ -30,8 +30,9 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 	}
 	if(incoming_text == '!naptime')  {
 		e.message.channel.uploadFile("img/billynap.gif"); // File
-		found = true;
-	} else if(incoming_text == '!mark' || incoming_text == '!tank') { // Mark Nickerson, our hero
+		return;
+	}
+	if(incoming_text == '!mark' || incoming_text == '!tank') { // Mark Nickerson, our hero
 		e.message.channel.uploadFile("img/tank.jpg"); // File
 		return;
 	}
