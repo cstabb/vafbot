@@ -113,7 +113,7 @@
 	"vdm": {
 		"text": ["Defend the Portal!"]
 	},
-		"vea": {
+	"vea": {
 		"text": ["Awesome!"]
 	},	
 	"veg": {
@@ -245,7 +245,6 @@
 	"vsam": {
 		"text": ["I'll Attack the Titan!"]
 	},	
-	
 	"vsbb": {
 		"text": ["I'm going for jungle buff!"]
 	},	
