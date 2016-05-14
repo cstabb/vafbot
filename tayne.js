@@ -18,8 +18,14 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 
 	if(incoming_text.substring(0,2) == '!v') {
 		vgs = require("./vgs.json");
-		vgs_str = "vgs." + incoming_text.substring(1).split(' ', 1) + "['text']";
-		sendMessage(e, eval(vgs_str));
+		vgs_arr = eval("vgs." + incoming_text.substring(1).split(' ', 1) + "['text']");
+		if(vgs_arr.length > 1) {
+			var rando = Math.floor(Math.random()*vgs_arr.length);
+			vgs_final = vgs_arr[rando];
+		} else {
+			vgs_final = vgs_arr[0];
+		}
+		sendMessage(e, vgs_final);
 		return;
 	}
 	if(incoming_text == '!naptime')  {
