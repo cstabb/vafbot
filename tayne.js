@@ -15,7 +15,14 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 	console.log(">(" + e.message.timestamp + ") " + e.message.author.username + ": " + e.message.content);
 
 	var incoming_text = e.message.content;
+
 	var found = false;
+	if(incoming_text.substring(0,2) == '!v') {
+		vgs = require("./vgs.json");
+		vgs_str = "vgs." + incoming_text.substring(1).split(' ', 1) + "['text']";
+		sendMessage(e, eval(vgs_str));
+		found = true
+	}
 	if(incoming_text == '!vvvc') {
 		sendMessage(e, 'COOL!');
 		found = true;
@@ -25,14 +32,6 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 	// Mark Nickerson, our hero
 	} else if(incoming_text == '!mark' || incoming_text == '!tank') {
 		e.message.channel.uploadFile("img/tank.jpg"); // File
-		found = true;
-	}
-	
-	// Do VGS
-	vgs = require('./vgs.js');
-	vgsMessage = vgs(incoming_text);
-	if(vgsMessage.message != false) {
-		sendMessage(e, vgsMessage.message);
 		found = true;
 	}
 	// Go back in time
