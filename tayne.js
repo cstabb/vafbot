@@ -32,6 +32,10 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 		e.message.channel.uploadFile("img/billynap.gif"); // File
 		return;
 	}
+	if(incoming_text == '!same')  {
+		e.message.channel.uploadFile("img/same.gif"); // File
+		return;
+	}
 	if(incoming_text == '!mark' || incoming_text == '!tank') { // Mark Nickerson, our hero
 		e.message.channel.uploadFile("img/tank.jpg"); // File
 		return;
