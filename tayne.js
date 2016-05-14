@@ -16,6 +16,36 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 
 	var incoming_text = e.message.content;
 
+	// !killyourself
+	// Go back in time and kill yourself
+	if(incoming_text == "!killyourself") { // Go back in time
+		sendMessage(e, "Going back in time, brb.");
+		client.disconnect();
+		return;
+	}
+
+	// !mark or !tank
+	// Mark Nickerson, our hero
+	if(incoming_text == "!mark" || incoming_text == "!tank") {
+		e.message.channel.uploadFile("resources/img/tank.jpg"); // File
+		return;
+	}
+
+	// !naptime
+	// Billy takes a dirt nap
+	if(incoming_text == "!naptime")  {
+		e.message.channel.uploadFile("resources/img/billynap.gif"); // File
+		return;
+	}
+
+	// !same
+	// Same!
+	if(incoming_text == "!same")  {
+		e.message.channel.uploadFile("resources/img/same.gif"); // File
+		return;
+	}
+
+	// VGS
 	if(incoming_text.substring(0,2) == "!v") {
 		vgs = require("./vgs.json");
 		vgs_arr = eval("vgs." + incoming_text.substring(1).split(" ", 1) + "['text']");
@@ -28,23 +58,8 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 		sendMessage(e, vgs_final);
 		return;
 	}
-	if(incoming_text == "!naptime")  {
-		e.message.channel.uploadFile("resources/img/billynap.gif"); // File
-		return;
-	}
-	if(incoming_text == "!same")  {
-		e.message.channel.uploadFile("resources/img/same.gif"); // File
-		return;
-	}
-	if(incoming_text == "!mark" || incoming_text == "!tank") { // Mark Nickerson, our hero
-		e.message.channel.uploadFile("resources/img/tank.jpg"); // File
-		return;
-	}
-	if(incoming_text == "!killyourself") { // Go back in time
-		sendMessage(e, "Going back in time, brb.");
-		client.disconnect();
-		return;
-	}
+
+	// Tayne doesn't understand
 	if(incoming_text.substring(0,1) == "!") { // Snark inc
 		var snark = [
 			"Good morning, Paul. What will your first sequence of the day be?",
