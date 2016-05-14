@@ -29,15 +29,15 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 		return;
 	}
 	if(incoming_text == "!naptime")  {
-		e.message.channel.uploadFile("img/billynap.gif"); // File
+		e.message.channel.uploadFile("resources/img/billynap.gif"); // File
 		return;
 	}
 	if(incoming_text == "!same")  {
-		e.message.channel.uploadFile("img/same.gif"); // File
+		e.message.channel.uploadFile("resources/img/same.gif"); // File
 		return;
 	}
 	if(incoming_text == "!mark" || incoming_text == "!tank") { // Mark Nickerson, our hero
-		e.message.channel.uploadFile("img/tank.jpg"); // File
+		e.message.channel.uploadFile("resources/img/tank.jpg"); // File
 		return;
 	}
 	if(incoming_text == "!killyourself") { // Go back in time
