@@ -74,6 +74,5 @@ client.Dispatcher.on("VOICE_CHANNEL_LEAVE", e => {
 });
 
 function sendMessage(obj, text) {
-	console.log(text);
 	obj.message.channel.sendMessage(text);
 }
