@@ -2,9 +2,9 @@
   "name": "vafbot",
   "version": "1.0.0",
   "description": "Nude. Tayne.",
-  "main": "bot.js",
+  "main": "tayne.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node tayne.js"
   },
   "repository": {
     "type": "git",
