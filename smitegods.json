@@ -1,0 +1,453 @@
+{
+	"Agni": {
+		"pantheon":		"Hindu",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Ah Muzen Cab": {
+		"pantheon":		"Mayan",
+		"attack_type":	"Ranged",
+		"power_type":	"Physical",
+		"class":		"Hunter"
+	}
+	"Ah Puch": {
+		"pantheon":		"Mayan",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Amaterasu": {
+		"pantheon":		"Japanese",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Warrior"
+	}
+	"Anhur": {
+		"pantheon":		"Egyptian",
+		"attack_type":	"Ranged",
+		"power_type":	"Physical",
+		"class":		"Hunter"
+	}
+	"Anubis": {
+		"pantheon":		"Egyptian",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Ao Kuang": {
+		"pantheon":		"Chinese",
+		"attack_type":	"Melee",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Aphrodite": {
+		"pantheon":		"Greek",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Apollo": {
+		"pantheon":		"Greek",
+		"attack_type":	"Ranged",
+		"power_type":	"Physical",
+		"class":		"Hunter"
+	}
+	"Arachne": {
+		"pantheon":		"Greek",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Assassin"
+	}
+	"Ares": {
+		"pantheon":		"Greek",
+		"attack_type":	"Melee",
+		"power_type":	"Magical",
+		"class":		"Guardian"
+	}
+	"Artemis": {
+		"pantheon":		"Greek",
+		"attack_type":	"Ranged",
+		"power_type":	"Physical",
+		"class":		"Hunter"
+	}
+	"Athena": {
+		"pantheon":		"Greek",
+		"attack_type":	"Melee",
+		"power_type":	"Magical",
+		"class":		"Guardian"
+	}
+	"Awilix": {
+		"pantheon":		"Mayan",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Assassin"
+	}
+	"Bacchus": {
+		"pantheon":		"Roman",
+		"attack_type":	"Melee",
+		"power_type":	"Magical",
+		"class":		"Guardian"
+	}
+	"Bakasura": {
+		"pantheon":		"Hindu",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Assassin"
+	}
+	"Bastet": {
+		"pantheon":		"Egyptian",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Assassin"
+	}
+	"Bellona": {
+		"pantheon":		"Roman",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Warrior"
+	}
+	"Cabrakan": {
+		"pantheon":		"Mayan",
+		"attack_type":	"Melee",
+		"power_type":	"Magical",
+		"class":		"Guardian"
+	}
+	"Chaac": {
+		"pantheon":		"Mayan",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Warrior"
+	}
+	Chang'e	Chinese	Ranged	Magical	Mage
+	"Chiron": {
+		"pantheon":		"Greek",
+		"attack_type":	"Ranged",
+		"power_type":	"Physical",
+		"class":		"Hunter"
+	}
+	"Chronos": {
+		"pantheon":		"Greek",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Cupid": {
+		"pantheon":		"Roman",
+		"attack_type":	"Ranged",
+		"power_type":	"Physical",
+		"class":		"Hunter"
+	}
+	"Fenrir": {
+		"pantheon":		"Norse",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Assassin"
+	}
+	"Freya": {
+		"pantheon":		"Norse",
+		"attack_type":	"Melee",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Geb": {
+		"pantheon":		"Egyptian",
+		"attack_type":	"Melee",
+		"power_type":	"Magical",
+		"class":		"Guardian"
+	}
+	"Guan Yu": {
+		"pantheon":		"Chinese",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Warrior"
+	}
+	"Hades": {
+		"pantheon":		"Greek",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"He Bo": {
+		"pantheon":		"Chinese",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Hel": {
+		"pantheon":		"Norse",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Hercules": {
+		"pantheon":		"Roman",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Warrior"
+	}
+	"Hou Yi": {
+		"pantheon":		"Chinese",
+		"attack_type":	"Ranged",
+		"power_type":	"Physical",
+		"class":		"Hunter"
+	}
+	"Hun Batz": {
+		"pantheon":		"Mayan",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Assassin"
+	}
+	"Isis": {
+		"pantheon":		"Egyptian",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Janus": {
+		"pantheon":		"Roman",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Jin Wei": {
+		"pantheon":		"Chinese",
+		"attack_type":	"Ranged",
+		"power_type":	"Physical",
+		"class":		"Hunter"
+	}
+	"Kali": {
+		"pantheon":		"Hindu",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Assassin"
+	}
+	"Khepri": {
+		"pantheon":		"Egyptian",
+		"attack_type":	"Melee",
+		"power_type":	"Magical",
+		"class":		"Guardian"
+	}
+	"Kukulkan": {
+		"pantheon":		"Mayan",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Kumbhakarna": {
+		"pantheon":		"Hindu",
+		"attack_type":	"Melee",
+		"power_type":	"Magical",
+		"class":		"Guardian"
+	}
+	"Loki": {
+		"pantheon":		"Norse",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Assassin"
+	}
+	"Medusa": {
+		"pantheon":		"Greek",
+		"attack_type":	"Ranged",
+		"power_type":	"Physical",
+		"class":		"Hunter"
+	}
+	"Mercury": {
+		"pantheon":		"Roman",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Assassin"
+	}
+	"Ne Zha": {
+		"pantheon":		"Chinese",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Assassin"
+	}
+	"Neith": {
+		"pantheon":		"Egyptian",
+		"attack_type":	"Ranged",
+		"power_type":	"Physical",
+		"class":		"Hunter"
+	}
+	"Nemesis": {
+		"pantheon":		"Greek",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Assassin"
+	}
+	"Nox": {
+		"pantheon":		"Roman",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Nu Wa": {
+		"pantheon":		"Chinese",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Odin": {
+		"pantheon":		"Norse",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Warrior"
+	}
+	"Osiris": {
+		"pantheon":		"Egyptian",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Warrior"
+	}
+	"Poseidon": {
+		"pantheon":		"Greek",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Ra": {
+		"pantheon":		"Egyptian",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Raijin": {
+		"pantheon":		"Japanese",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Rama": {
+		"pantheon":		"Hindu",
+		"attack_type":	"Ranged",
+		"power_type":	"Physical",
+		"class":		"Hunter"
+	}
+	"Ratatoskr": {
+		"pantheon":		"Norse",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Assassin"
+	}
+	"Ravana": {
+		"pantheon":		"Hindu",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Warrior"
+	}
+	"Scylla": {
+		"pantheon":		"Greek",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Serqet": {
+		"pantheon":		"Egyptian",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Assassin"
+	}
+	"Skadi": {
+		"pantheon":		"Norse",
+		"attack_type":	"Ranged",
+		"power_type":	"Physical",
+		"class":		"Hunter"
+	}
+	"Sobek": {
+		"pantheon":		"Egyptian",
+		"attack_type":	"Melee",
+		"power_type":	"Magical",
+		"class":		"Guardian"
+	}
+	"Sol": {
+		"pantheon":		"Norse",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Sun Wukong": {
+		"pantheon":		"Chinese",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Warrior"
+	}
+	"Susano": {
+		"pantheon":		"Japanese",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Assassin"
+	}
+	"Sylvanus": {
+		"pantheon":		"Roman",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Guardian"
+	}
+	"Thanatos": {
+		"pantheon":		"Greek",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Assassin"
+	}
+	"Thor": {
+		"pantheon":		"Norse",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Assassin"
+	}
+	"Tyr": {
+		"pantheon":		"Norse",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Warrior"
+	}
+	"Ullr": {
+		"pantheon":		"Norse",
+		"attack_type":	"Ranged",
+		"power_type":	"Physical",
+		"class":		"Hunter"
+	}
+	"Vamana": {
+		"pantheon":		"Hindu",
+		"attack_type":	"Melee",
+		"power_type":	"Physical",
+		"class":		"Warrior"
+	}
+	"Vulcan": {
+		"pantheon":		"Roman",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Xbalanque": {
+		"pantheon":		"Mayan",
+		"attack_type":	"Ranged",
+		"power_type":	"Physical",
+		"class":		"Hunter"
+	}
+	"Xing Tian": {
+		"pantheon":		"Chinese",
+		"attack_type":	"Melee",
+		"power_type":	"Magical",
+		"class":		"Guardian"
+	}
+	"Ymir": {
+		"pantheon":		"Norse",
+		"attack_type":	"Melee",
+		"power_type":	"Magical",
+		"class":		"Guardian"
+	}
+	"Zeus": {
+		"pantheon":		"Greek",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+	"Zhong Kui": {
+		"pantheon":		"Chinese",
+		"attack_type":	"Ranged",
+		"power_type":	"Magical",
+		"class":		"Mage"
+	}
+}
