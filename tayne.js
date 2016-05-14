@@ -16,32 +16,25 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 
 	var incoming_text = e.message.content;
 
-	var found = false;
 	if(incoming_text.substring(0,2) == '!v') {
 		vgs = require("./vgs.json");
 		vgs_str = "vgs." + incoming_text.substring(1).split(' ', 1) + "['text']";
 		sendMessage(e, eval(vgs_str));
-		found = true
+		return;
 	}
-	if(incoming_text == '!vvvc') {
-		sendMessage(e, 'COOL!');
-		found = true;
-	} else if(incoming_text == '!naptime')  {
+	if(incoming_text == '!naptime')  {
 		e.message.channel.uploadFile("img/billynap.gif"); // File
 		found = true;
-	// Mark Nickerson, our hero
-	} else if(incoming_text == '!mark' || incoming_text == '!tank') {
+	} else if(incoming_text == '!mark' || incoming_text == '!tank') { // Mark Nickerson, our hero
 		e.message.channel.uploadFile("img/tank.jpg"); // File
-		found = true;
+		return;
 	}
-	// Go back in time
-	if(incoming_text == '!killyourself') {
+	if(incoming_text == '!killyourself') { // Go back in time
 		sendMessage(e, 'Going back in time, brb.');
 		client.disconnect();
-		found = true;
+		return;
 	}
-	// Snark inc
-	if(incoming_text.substring(0,1) == '!' && !found) {
+	if(incoming_text.substring(0,1) == '!') { // Snark inc
 		var snark = [
 			'Good morning, Paul. What will your first sequence of the day be?',
 			'I can\'t wait to entertayne you.',
