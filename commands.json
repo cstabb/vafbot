@@ -1,0 +1,8 @@
+{
+	"!tank": {
+		"output": "e.message.channel.uploadFile('resources/img/tank.jpg')"
+	},
+	"!mark": {
+		"output": "e.message.channel.uploadFile('resources/img/tank.jpg')"
+	}
+}

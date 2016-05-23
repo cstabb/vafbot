@@ -1,26 +1,38 @@
+var log = require('better-log')
+
 var Discordie = require("discordie");
-var client = new Discordie();
+var discord = new Discordie();
 
 var Config = require("./config.json");
-var token = Config.token;
-client.connect({ token: token });
+discord.connect({ token: Config.discord.token });
 
-client.Dispatcher.on("GATEWAY_READY", e => {
-	console.log("New Event: GATEWAY_READY");
-	console.log("Hey, I'm " + client.User.username + ", your latest dancer. I can't wait to entertain you.");
+var tayneCommands = require("./commands.json");
+
+// This event is emitted when the Discord server connection is ready.
+discord.Dispatcher.on("GATEWAY_READY", e => {
+	log("New Event: GATEWAY_READY");
+	log("Hey, I'm " + discord.User.username + ", your latest dancer. I can't wait to entertain you.");
 });
 
-client.Dispatcher.on("MESSAGE_CREATE", e => {
-	console.log("New Event: MESSAGE_CREATE");
-	console.log(">(" + e.message.timestamp + ") " + e.message.author.username + ": " + e.message.content);
+// This event is emitted when a user inputs something to a text channel.
+discord.Dispatcher.on("MESSAGE_CREATE", e => {
+	log("New Event: MESSAGE_CREATE");
+	log(">(" + e.message.timestamp + ") " + e.message.author.username + ": " + e.message.content);
 
 	var incoming_text = e.message.content;
 
+	if(incoming_text.substring(0,1) == "!") {
+		if(tayneCommands.hasOwnProperty(incoming_text)) {
+			eval(tayneCommands[incoming_text].output);
+		}
+	}
+
+	/*
 	// !killyourself
 	// Go back in time and kill yourself
 	if(incoming_text == "!killyourself") { // Go back in time
 		sendMessage(e, "Going back in time, brb.");
-		client.disconnect();
+		discord.disconnect();
 		return;
 	}
 
@@ -49,7 +61,7 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 	// Choose a random Smite god based on desired tags
 	// Valid tags are pantheon, attack type (melee, ranged), power type (physical, magical), class (mage, hunter, warrior, guardian, assassin)
 	if(incoming_text.startsWith("!smite")) {
-		console.log("SMITE!");
+		_log("SMITE!");
 		return;
 	}
 
@@ -83,17 +95,19 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 		var rando_snark = Math.floor(Math.random()*snark.length);
 		sendMessage(e, snark[rando_snark]);
 	}
+	*/
 });
 
-client.Dispatcher.on("VOICE_CHANNEL_JOIN", e => {
-	console.log("New Event: VOICE_CHANNEL_JOIN");
-	console.log("Oh hi " + e.user.username);
+// This event is emitted when a user joins a voice channel.
+discord.Dispatcher.on("VOICE_CHANNEL_JOIN", e => {
+	log("New Event: VOICE_CHANNEL_JOIN");
+	log("Oh hi " + e.user.username);
 });
 
-
-client.Dispatcher.on("VOICE_CHANNEL_LEAVE", e => {
-	console.log("New Event: VOICE_CHANNEL_LEAVE");
-	console.log("See ya never, " + e.user.username);
+// This event is emitted when a user leaves a voice channel.
+discord.Dispatcher.on("VOICE_CHANNEL_LEAVE", e => {
+	log("New Event: VOICE_CHANNEL_LEAVE");
+	log("See ya never, " + e.user.username);
 });
 
 function sendMessage(obj, text) {
