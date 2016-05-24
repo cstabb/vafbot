@@ -1,7 +1,7 @@
 var Discordie = require("discordie");
-var ogg = require("ogg");
-var vorbis = require('vorbis');
 var client = new Discordie();
+
+var oggstream = require("./oggstream.js");
 
 var Config = require("./config.json");
 var token = Config.token;
@@ -75,43 +75,21 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 
 	// VGS
 	if(incoming_text.substring(0,2) == "!v") {
-		if(incoming_text == "!vej") {
-			var batz = [
-				"Hun_Batz_Joke_1c.ogg",
-				"Hun_Batz_Joke_2a.ogg",
-				"Hun_Batz_Joke_3a.ogg"
-			];
-			return playRandom(e, batz);
-		}
-		if(incoming_text == "!vet") {
-			var batz = [
-				"Hun_Batz_Taunt_1b.ogg",
-				"Hun_Batz_Taunt_2a.ogg",
-				"Hun_Batz_Taunt_3a.ogg",
-				"Hun_Batz_Taunt_4b.ogg",
-				"Hun_Batz_Taunt_5b.ogg"
-			];
-			return playRandom(e, batz);
-		}
-		if(incoming_text == "!vel") {
-			var batz = [
-				"Hun_Batz_Laugh_1.ogg",
-				"Hun_Batz_Laugh_2.ogg",
-				"Hun_Batz_Laugh_3.ogg"
-			];
-			return playRandom(e, batz);
-		}
-
 		vgs = require("./vgs.json");
-		vgs_arr = eval("vgs." + incoming_text.substring(1).split(" ", 1) + "['text']");
-		if(vgs_arr.length > 1) {
-			var rando = Math.floor(Math.random()*vgs_arr.length);
-			vgs_final = vgs_arr[rando];
-		} else {
-			vgs_final = vgs_arr[0];
-		}
-		sendMessage(e, vgs_final);
-		return;
+		v_command = incoming_text.substring(1).split(" ", 1);
+		vgs_data = vgs[v_command];
+
+		if(vgs_data !== undefined) {
+			rando = Math.floor(Math.random()*vgs_data.length);
+
+			if(vgs_data[rando]['text'] !== undefined) {
+				sendMessage(e, vgs_data[rando]['text']);
+			}
+			if(vgs_data[rando]['audio'] !== undefined) {
+				oggstream.play(false, client, vgs_data[rando]['audio']);
+			}
+			return;
+		}		
 	}
 
 	// Tayne doesn't understand
@@ -149,55 +127,4 @@ function sendMessage(obj, text) {
 
 String.prototype.startsWith = function(prefix) {
     return this.indexOf(prefix) === 0;
-}
-
-function playRandom(event, rando) {
-	guild = event.message.channel.guild;
-	if (!client.VoiceConnections.length) {
-		return event.message.reply("Not connected to any channel");
-	}
-	var info = client.VoiceConnections.getForGuild(guild);
-	var rando_key = Math.floor(Math.random()*rando.length);
-	play(info, "/resources/snd/VGS/"+rando[rando_key])
-}
-
-function play(info, filename) {
-	if (!client.VoiceConnections.length) {
-		return console.log("Voice not connected");
-	}
-
-	if (!info) info = client.VoiceConnections[0];
-
-	var file = __dirname + filename;
-
-	var fs = require('fs');
-
-	var decoder = new ogg.Decoder();
-
-	decoder.on('stream', function (stream) {
-
-		var vd = new vorbis.Decoder();
-
-		// the "format" event contains the raw PCM format 
-		vd.on('format', function (format) {
-			var options = {
-				frameDuration: 60,
-				sampleRate: format.sampleRate,
-				channels: format.channels,
-				float: true
-			};
-			var encoderStream = info.voiceConnection.getEncoderStream(options);
-			if (!encoderStream) {
-				return console.log(
-				"Unable to get encoder stream, connection is disposed"
-				);
-			}
-			vd.pipe(encoderStream);
-		});
-
-		stream.pipe(vd);
-	});
-
-	// pipe the ogg file to the decoder
-	fs.createReadStream(file).pipe(decoder);
 }
