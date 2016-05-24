@@ -1,8 +1,69 @@
 {
+	"!killyourself": {
+		"instructions":	[
+			{
+				"method"	: "sendMessage",
+				"output"	: "Going back in time, brb.",
+				"channel"	: null,
+				"override"	: null
+			},
+			{
+				"method"	: "sendMessage",
+				"output"	: "No really.",
+				"channel"	: null,
+				"override"	: null
+			},
+			{
+				"method"	: null,
+				"output"	: null,
+				"channel"	: null,
+				"override"	: "discord.disconnect()"
+			}
+		],
+		"notes"	: "Put some notes here"
+	},
 	"!tank": {
-		"output": "e.message.channel.uploadFile('resources/img/tank.jpg')"
+		"instructions":	[
+			{
+				"method"	: "uploadFile",
+				"output"	: "resources/img/tank.jpg",
+				"channel"	: null,
+				"override"	: null
+			}
+		],
+		"notes"	: "Put some notes here"
 	},
 	"!mark": {
-		"output": "e.message.channel.uploadFile('resources/img/tank.jpg')"
+		"instructions":	[
+			{
+				"method"	: "uploadFile",
+				"output"	: "resources/img/tank.jpg",
+				"channel"	: null,
+				"override"	: null
+			}
+		],
+		"notes"	: "Put some notes here"
+	},
+	"!naptime": {
+		"instructions":	[
+			{
+				"method"	: "uploadFile",
+				"output"	: "resources/img/billynap.gif",
+				"channel"	: null,
+				"override"	: null
+			}
+		],
+		"notes"	: "Put some notes here"
+	},
+	"!same": {
+		"instructions":	[
+			{	
+				"method"	: "uploadFile",
+				"output"	: "resources/img/same.gif",
+				"channel"	: null,
+				"override"	: null
+			}
+		],
+		"notes"	: "Put some notes here"
 	}
 }

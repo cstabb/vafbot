@@ -23,40 +23,19 @@ discord.Dispatcher.on("MESSAGE_CREATE", e => {
 
 	if(incoming_text.substring(0,1) == "!") {
 		if(tayneCommands.hasOwnProperty(incoming_text)) {
-			eval(tayneCommands[incoming_text].output);
+			for (var i = 0, l = tayneCommands[incoming_text].instructions.length; i < l; i++) {
+			    var obj = tayneCommands[incoming_text].instructions[i];
+			    if(obj.override === null) {
+			    	var s = 'e.message.channel.' + obj.method + '("' + obj.output + '")';
+					eval(s);
+			    } else {
+					eval(obj.override);
+			    }
+			}
 		}
 	}
 
-	/*
-	// !killyourself
-	// Go back in time and kill yourself
-	if(incoming_text == "!killyourself") { // Go back in time
-		sendMessage(e, "Going back in time, brb.");
-		discord.disconnect();
-		return;
-	}
-
-	// !mark or !tank
-	// Mark Nickerson, our hero
-	if(incoming_text == "!mark" || incoming_text == "!tank") {
-		e.message.channel.uploadFile("resources/img/tank.jpg"); // File
-		return;
-	}
-
-	// !naptime
-	// Billy takes a dirt nap
-	if(incoming_text == "!naptime") {
-		e.message.channel.uploadFile("resources/img/billynap.gif"); // File
-		return;
-	}
-
-	// !same
-	// Same!
-	if(incoming_text == "!same") {
-		e.message.channel.uploadFile("resources/img/same.gif"); // File
-		return;
-	}
-
+/*
 	// !smite-random [tag] [tag] [tag] ...
 	// Choose a random Smite god based on desired tags
 	// Valid tags are pantheon, attack type (melee, ranged), power type (physical, magical), class (mage, hunter, warrior, guardian, assassin)
@@ -64,7 +43,6 @@ discord.Dispatcher.on("MESSAGE_CREATE", e => {
 		_log("SMITE!");
 		return;
 	}
-
 	// VGS
 	if(incoming_text.substring(0,2) == "!v") {
 		vgs = require("./vgs.json");
