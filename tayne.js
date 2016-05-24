@@ -1,6 +1,8 @@
 var Discordie = require("discordie");
 var client = new Discordie();
 
+var oggstream = require("./oggstream.js");
+
 var Config = require("./config.json");
 var token = Config.token;
 client.connect({ token: token });
@@ -8,6 +10,15 @@ client.connect({ token: token });
 client.Dispatcher.on("GATEWAY_READY", e => {
 	console.log("New Event: GATEWAY_READY");
 	console.log("Hey, I'm " + client.User.username + ", your latest dancer. I can't wait to entertain you.");
+
+
+	const guild = client.Guilds.getBy("name", "Milzton");
+	if (!guild) return console.log("Guild not found");
+
+	const general = guild.voiceChannels.find(c => c.name == "General");
+	if (!general) return console.log("Channel not found");
+
+	return general.join(false, false);
 });
 
 client.Dispatcher.on("MESSAGE_CREATE", e => {
@@ -16,6 +27,15 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 
 	var incoming_text = e.message.content;
 
+	if (incoming_text.indexOf("!join ") == 0) {
+		guild = e.message.channel.guild;
+		const targetChannel = incoming_text.replace("!join ", "");
+
+		var vchannel = guild.voiceChannels.find(channel => channel.name.toLowerCase().indexOf(targetChannel) >= 0);
+		if (vchannel) vchannel.join().then(info => play(info));
+
+		return;
+	}
 	// !killyourself
 	// Go back in time and kill yourself
 	if(incoming_text == "!killyourself") { // Go back in time
@@ -56,15 +76,20 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
 	// VGS
 	if(incoming_text.substring(0,2) == "!v") {
 		vgs = require("./vgs.json");
-		vgs_arr = eval("vgs." + incoming_text.substring(1).split(" ", 1) + "['text']");
-		if(vgs_arr.length > 1) {
-			var rando = Math.floor(Math.random()*vgs_arr.length);
-			vgs_final = vgs_arr[rando];
-		} else {
-			vgs_final = vgs_arr[0];
-		}
-		sendMessage(e, vgs_final);
-		return;
+		v_command = incoming_text.substring(1).split(" ", 1);
+		vgs_data = vgs[v_command];
+
+		if(vgs_data !== undefined) {
+			rando = Math.floor(Math.random()*vgs_data.length);
+
+			if(vgs_data[rando]['text'] !== undefined) {
+				sendMessage(e, vgs_data[rando]['text']);
+			}
+			if(vgs_data[rando]['audio'] !== undefined) {
+				oggstream.play(false, client, vgs_data[rando]['audio']);
+			}
+			return;
+		}		
 	}
 
 	// Tayne doesn't understand
