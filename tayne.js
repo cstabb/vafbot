@@ -68,7 +68,15 @@ discord.Dispatcher.on("GATEWAY_READY", e => {
 					}
 					return;
 				}		
-			} else {
+			} else if (incoming_text.indexOf("!join ") == 0) {
+		        guild = e.message.channel.guild;
+		        const targetChannel = incoming_text.replace("!join ", "");
+
+		        var vchannel = guild.voiceChannels.find(channel => channel.name.toLowerCase().indexOf(targetChannel) >= 0);
+		        if (vchannel) vchannel.join().then(info => play(info));
+
+		        return;
+		    } else {
 				var snark = [
 				"Good morning, Paul. What will your first sequence of the day be?",
 				"I can't wait to entertayne you.",
