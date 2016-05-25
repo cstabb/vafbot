@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/cstabb/vafbot#readme",
   "dependencies": {
-    "discordie": "^0.6.1"
+    "discordie": "^0.6.1",
+    "vorbis": "^0.2.1"
   }
 }
