@@ -5,7 +5,7 @@ var log = require('better-log')
 var oggstream = require("./oggstream.js");
 
 const discord = new Discordie();
-discord.connect({ token: Config.discord.token });
+discord.connect({ token: Config.token });
 
 function sendMessage(obj, text) {
 	obj.message.channel.sendMessage(text);
@@ -14,8 +14,6 @@ function sendMessage(obj, text) {
 String.prototype.startsWith = function(prefix) {
     return this.indexOf(prefix) === 0;
 }
-
-
 // This event is emitted when the Discord server connection is ready.
 discord.Dispatcher.on("GATEWAY_READY", e => {
 
@@ -27,7 +25,6 @@ discord.Dispatcher.on("GATEWAY_READY", e => {
 		// Do logging
 		log("New Event: MESSAGE_CREATE");
 		log(">(" + e.message.timestamp + ") " + e.message.author.username + ": " + e.message.content);
-
 
 		var incoming_text = e.message.content;
 
