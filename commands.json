@@ -1,0 +1,94 @@
+{	
+	"!smite": {
+		"notes"	: "Choose a random Smite god based on desired tags. Valid tags are pantheon, attack type (melee, ranged), power type (physical, magical), class (mage, hunter, warrior, guardian, assassin)",
+		"help"	: "",
+		"permissions" : "",
+		"instructions":	[
+			{
+				"method"	: "sendMessage",
+				"output"	: "SMITE!",
+				"channel"	: null,
+				"override"	: null
+			}
+		]
+		
+	},
+	"!killyourself": {
+		"notes"	: "Put some notes here",
+		"help"	: "This command kills Tayne. Long live Tayne!",
+		"permissions" : "",
+		"instructions":	[
+			{
+				"method"	: "sendMessage",
+				"output"	: "Going back in time, brb.",
+				"channel"	: null,
+				"override"	: null
+			},
+			{
+				"method"	: "sendMessage",
+				"output"	: "No really.",
+				"channel"	: null,
+				"override"	: null
+			},
+			{
+				"method"	: null,
+				"output"	: null,
+				"channel"	: null,
+				"override"	: "discord.disconnect()"
+			}
+		]
+		
+	},
+	"!tank": {
+		"notes"	: "",
+		"help"	: "",
+		"permissions" : "",
+		"instructions":	[
+			{
+				"method"	: "uploadFile",
+				"output"	: "resources/img/tank.jpg",
+				"channel"	: null,
+				"override"	: null
+			}
+		]
+	},
+	"!mark": {
+		"notes"	: "Put some notes here",
+		"help"	: "This command kills Tayne. Long live Tayne!",
+		"permissions" : "",
+		"instructions":	[
+			{
+				"method"	: "uploadFile",
+				"output"	: "resources/img/tank.jpg",
+				"channel"	: null,
+				"override"	: null
+			}
+		]
+	},
+	"!naptime": {
+		"notes"	: "Put some notes here",
+		"help"	: "This command kills Tayne. Long live Tayne!",
+		"permissions" : "",
+		"instructions":	[
+			{
+				"method"	: "uploadFile",
+				"output"	: "resources/img/billynap.gif",
+				"channel"	: null,
+				"override"	: null
+			}
+		]
+	},
+	"!same": {
+		"notes"	: "Put some notes here",
+		"help"	: "This command kills Tayne. Long live Tayne!",
+		"permissions" : "",
+		"instructions":	[
+			{	
+				"method"	: "uploadFile",
+				"output"	: "resources/img/same.gif",
+				"channel"	: null,
+				"override"	: null
+			}
+		]
+	}
+}
