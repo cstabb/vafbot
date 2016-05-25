@@ -28,10 +28,20 @@ discord.Dispatcher.on("GATEWAY_READY", e => {
 		log("New Event: MESSAGE_CREATE");
 		log(">(" + e.message.timestamp + ") " + e.message.author.username + ": " + e.message.content);
 
-
 		var incoming_text = e.message.content;
 
 		if(incoming_text.startsWith("!")) {
+
+			if (incoming_text.indexOf("!join ") == 0) {
+				guild = e.message.channel.guild;
+				const targetChannel = incoming_text.replace("!join ", "");
+
+				var vchannel = guild.voiceChannels.find(channel => channel.name.toLowerCase().indexOf(targetChannel) >= 0);
+				if (vchannel) vchannel.join().then(info => play(info));
+
+				return;
+			}
+
 			if(Commands.hasOwnProperty(incoming_text)) {
 				for (var i = 0, l = Commands[incoming_text].instructions.length; i < l; i++) {
 				    var obj = Commands[incoming_text].instructions[i];
