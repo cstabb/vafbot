@@ -1,5 +1,22 @@
-{
+{	
+	"!smite": {
+		"notes"	: "Choose a random Smite god based on desired tags. Valid tags are pantheon, attack type (melee, ranged), power type (physical, magical), class (mage, hunter, warrior, guardian, assassin)",
+		"help"	: "",
+		"permissions" : "",
+		"instructions":	[
+			{
+				"method"	: "sendMessage",
+				"output"	: "Going back in time, brb.",
+				"channel"	: null,
+				"override"	: null
+			}
+		]
+		
+	},
 	"!killyourself": {
+		"notes"	: "Put some notes here",
+		"help"	: "This command kills Tayne. Long live Tayne!",
+		"permissions" : "",
 		"instructions":	[
 			{
 				"method"	: "sendMessage",
@@ -19,10 +36,13 @@
 				"channel"	: null,
 				"override"	: "discord.disconnect()"
 			}
-		],
-		"notes"	: "Put some notes here"
+		]
+		
 	},
 	"!tank": {
+		"notes"	: "",
+		"help"	: "",
+		"permissions" : "",
 		"instructions":	[
 			{
 				"method"	: "uploadFile",
@@ -30,10 +50,12 @@
 				"channel"	: null,
 				"override"	: null
 			}
-		],
-		"notes"	: "Put some notes here"
+		]
 	},
 	"!mark": {
+		"notes"	: "Put some notes here",
+		"help"	: "This command kills Tayne. Long live Tayne!",
+		"permissions" : "",
 		"instructions":	[
 			{
 				"method"	: "uploadFile",
@@ -41,10 +63,12 @@
 				"channel"	: null,
 				"override"	: null
 			}
-		],
-		"notes"	: "Put some notes here"
+		]
 	},
 	"!naptime": {
+		"notes"	: "Put some notes here",
+		"help"	: "This command kills Tayne. Long live Tayne!",
+		"permissions" : "",
 		"instructions":	[
 			{
 				"method"	: "uploadFile",
@@ -52,10 +76,12 @@
 				"channel"	: null,
 				"override"	: null
 			}
-		],
-		"notes"	: "Put some notes here"
+		]
 	},
 	"!same": {
+		"notes"	: "Put some notes here",
+		"help"	: "This command kills Tayne. Long live Tayne!",
+		"permissions" : "",
 		"instructions":	[
 			{	
 				"method"	: "uploadFile",
@@ -63,7 +89,6 @@
 				"channel"	: null,
 				"override"	: null
 			}
-		],
-		"notes"	: "Put some notes here"
+		]
 	}
 }
