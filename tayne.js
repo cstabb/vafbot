@@ -28,7 +28,20 @@ discord.Dispatcher.on("GATEWAY_READY", e => {
 
 		var incoming_text = e.message.content;
 
+		if (incoming_text.indexOf("!join ") == 0) {
+	        guild = e.message.channel.guild;
+	        const targetChannel = incoming_text.replace("!join ", "");
+
+	        var vchannel = guild.voiceChannels.find(channel => channel.name.toLowerCase().indexOf(targetChannel) >= 0);
+	        if (vchannel) vchannel.join().then(info => play(info));
+
+	        return;
+	    }
+			
+
 		if(incoming_text.startsWith("!")) {
+
+
 			if(Commands.hasOwnProperty(incoming_text)) {
 				for (var i = 0, l = Commands[incoming_text].instructions.length; i < l; i++) {
 				    var obj = Commands[incoming_text].instructions[i];
@@ -51,7 +64,7 @@ discord.Dispatcher.on("GATEWAY_READY", e => {
 						sendMessage(e, vgs_data[rando]['text']);
 					}
 					if(vgs_data[rando]['audio'] !== undefined) {
-						oggstream.play(false, client, vgs_data[rando]['audio']);
+						oggstream.play(false, discord, vgs_data[rando]['audio']);
 					}
 					return;
 				}		
