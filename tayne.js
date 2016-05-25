@@ -2,6 +2,7 @@ var Discordie = require("discordie");
 var Config = require("./config.json");
 var Commands= require("./commands.json");
 var log = require('better-log')
+var oggstream = require("./oggstream.js");
 
 const discord = new Discordie();
 discord.connect({ token: Config.discord.token });
@@ -17,6 +18,7 @@ String.prototype.startsWith = function(prefix) {
 
 // This event is emitted when the Discord server connection is ready.
 discord.Dispatcher.on("GATEWAY_READY", e => {
+
 	log("New Event: GATEWAY_READY");
 	log("Hey, I'm " + discord.User.username + ", your latest dancer. I can't wait to entertain you.");
 
@@ -72,15 +74,6 @@ discord.Dispatcher.on("GATEWAY_READY", e => {
 				sendMessage(e, snark[rando_snark]);
 			}
 		}
-
-		// !smite-random [tag] [tag] [tag] ...
-		// Choose a random Smite god based on desired tags
-		// Valid tags are pantheon, attack type (melee, ranged), power type (physical, magical), class (mage, hunter, warrior, guardian, assassin)
-		if(incoming_text.startsWith("!smite")) {
-			log("SMITE!");
-			return;
-		}
-
 	});
 
 	// This event is emitted when a user joins a voice channel.

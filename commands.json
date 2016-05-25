@@ -6,7 +6,7 @@
 		"instructions":	[
 			{
 				"method"	: "sendMessage",
-				"output"	: "Going back in time, brb.",
+				"output"	: "SMITE!",
 				"channel"	: null,
 				"override"	: null
 			}
