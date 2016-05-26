@@ -28,17 +28,6 @@ discord.Dispatcher.on("GATEWAY_READY", e => {
 
 		var incoming_text = e.message.content;
 
-		if (incoming_text.indexOf("!join ") == 0) {
-	        guild = e.message.channel.guild;
-	        const targetChannel = incoming_text.replace("!join ", "");
-
-	        var vchannel = guild.voiceChannels.find(channel => channel.name.toLowerCase().indexOf(targetChannel) >= 0);
-	        if (vchannel) vchannel.join().then(info => play(info));
-
-	        return;
-	    }
-			
-
 		if(incoming_text.startsWith("!")) {
 
 
