@@ -2,3 +2,4 @@
 applications:
 - name: vafbot
   no-route: true
+  memory: 512M
