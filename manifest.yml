@@ -1,0 +1,4 @@
+---
+applications:
+- name: vafbot
+  no-route: true

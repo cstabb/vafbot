@@ -1,0 +1,5 @@
+node_modules/ogg
+node_modules/vorbis
+node_modules/discordie
+npm-debug.log
+*.db
