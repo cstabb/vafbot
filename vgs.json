@@ -1,0 +1,458 @@
+{
+	"va1": {
+		"text": ["Attack left lane!"]
+	},
+	"va2": {
+		"text": ["Attack middle lane!"]
+	},	
+	"va3": {
+		"text": ["Attack right lane!"]
+	},	
+	"vaa": {
+		"text": ["Attack!"]
+	},	
+	"vaf": {
+		"text": ["Attack Fire Giant!"]
+	},	
+	"vag": {
+		"text": ["Attack the Gold Fury!"]
+	},	
+	"vam": {
+		"text": ["Attack the Titan!"]
+	},
+	"vat1": {
+		"text": ["Attack left tower!"]
+	},	
+	"vat2": {
+		"text": ["Attack middle tower!"]
+	},	
+	"vat3": {
+		"text": ["Attack right tower!"]
+	},
+	"vb1": {
+		"text": ["Enemies in left lane!"]
+	},	
+	"vb2": {
+		"text": ["Enemies in middle lane!"]
+	},	
+	"vb3": {
+		"text": ["Enemies in right lane!"]
+	},	
+	"vba": {
+		"text": ["Enemy ultimate incoming!"]
+	},	
+	"vbb": {
+		"text": ["Enemies have module.message =ed to base."]
+	},	
+	"vbd": {
+		"text": ["Enemy ultimate down!"]
+	},	
+	"vbe": {
+		"text": ["Enemies behind us!"]
+	},	
+	"vbf": {
+		"text": ["Enemies at the Fire Giant!"]
+	},	
+	"vbg": {
+		"text": ["Enemies at the Gold Fury!"]
+	},	
+	"vbm": {
+		"text": ["Enemies at our Titan!"]
+	},	
+	"vbs": {
+		"text": ["Enemy spotted!"]
+	},
+	"vbj1": {
+		"text": ["Enemies in the Left Jungle!"]
+	},	
+	"vbj2": {
+		"text": ["Enemies in the right jungle!"]
+	},	
+	"vbjj": {
+		"text": ["Enemies in the jungle!"]
+	},
+	"vc1": {
+		"text": ["Be careful left!"]
+	},	
+	"vc2": {
+		"text": ["Be careful middle!"]
+	},	
+	"vc3": {
+		"text": ["Be careful right!"]
+	},	
+	"vcb": {
+		"text": ["module.message = to base!"]
+	},	
+	"vcc": {
+		"text": ["Be careful!"]
+	},	
+	"vcj": {
+		"text": ["Be careful in the jungle!"]
+	},	
+	"vd1": {
+		"text": ["Defend left lane!"]
+	},	
+	"vd2": {
+		"text": ["Defend middle lane!"]
+	},	
+	"vd3": {
+		"text": ["Defend right lane!"]
+	},	
+	"vdd": {
+		"text": ["Defend!"]
+	},	
+	"vdf": {
+		"text": ["Defend the Fire Giant!"]
+	},	
+	"vdg": {
+		"text": ["Defend the Gold Fury!"]
+	},	
+	"vdm": {
+		"text": ["Defend the Titan!"]
+	},	
+	"vdm": {
+		"text": ["Defend the Portal!"]
+	},
+		"vea": {
+		"text": ["Awesome!"]
+	},	
+	"veg": {
+		"text": ["I'm the Greatest!"]
+	},	
+	"ver": {
+		"text": ["You Rock!"]
+	},	
+	"vew": {
+		"text": ["Woohoo!"]
+	},	
+	"vf1": {
+		"text": ["Enemy missing left!"]
+	},	
+	"vf2": {
+		"text": ["Enemy missing middle!"]
+	},	
+	"vf3": {
+		"text": ["Enemy missing right!"]
+	},	
+	"vff": {
+		"text": ["Enemy missing!"]
+	},	
+	"vg1": {
+		"text": ["Gank left lane!"]
+	},	
+	"vg2": {
+		"text": ["Gank middle lane!"]
+	},	
+	"vg3": {
+		"text": ["Gank right lane!"]
+	},	
+	"vgg": {
+		"text": ["Gank!"]
+	},	
+	"vh1": {
+		"text": ["Help left lane!"]
+	},	
+	"vh2": {
+		"text": ["Help middle lane!"]
+	},	
+	"vh3": {
+		"text": ["Help right lane!"]
+	},	
+	"vhh": {
+		"text": ["Help!"]
+	},	
+	"vhs": {
+		"text": ["Need Healing!"]
+	},	
+	"vi1": {
+		"text": ["Enemies incoming left!"]
+	},	
+	"vi2": {
+		"text": ["Enemies incoming middle!"]
+	},	
+	"vi3": {
+		"text": ["Enemies incoming right!"]
+	},	
+	"vii": {
+		"text": ["Enemies incoming!"]
+	},	
+	"vq1": {
+		"text": ["Ward Left!"]
+	},	
+	"vq2": {
+		"text": ["Ward middle!"]
+	},	
+	"vq3": {
+		"text": ["Ward Right!"]
+	},	
+	"vqf": {
+		"text": ["Ward Fire Giant!"]
+	},	
+	"vqg": {
+		"text": ["Ward Gold Fury!"]
+	},	
+	"vqn": {
+		"text": ["Need Wards!"]
+	},	
+	"vqq": {
+		"text": ["Ward Here!"]
+	},	
+	"vr1": {
+		"text": ["Retreat left lane!"]
+	},	
+	"vr2": {
+		"text": ["Retreat middle lane!"]
+	},	
+	"vr3": {
+		"text": ["Retreat right lane!"]
+	},	
+	"vrj": {
+		"text": ["Retreat from the Jungle!"]
+	},	
+	"vrr": {
+		"text": ["Retreat!"]
+	},	
+	"vrs": {
+		"text": ["Save yourself!"]
+	},	
+	"vso": {
+		"text": ["I'm on it!"]
+	},	
+	"vsr": {
+		"text": ["Falling back!"]
+	},	
+	"vss": {
+		"text": ["I'm building Stacks!"]
+	},	
+	"vsa1": {
+		"text": ["I'll Attack left lane!"]
+	},	
+	"vsa2": {
+		"text": ["I'll Attack middle lane!"]
+	},	
+	"vsa3": {
+		"text": ["I'll Attack right lane!"]
+	},	
+	"vsaa": {
+		"text": ["I'll Attack!"]
+	},	
+	"vsaf": {
+		"text": ["I'll Attack Fire Giant!"]
+	},	
+	"vsag": {
+		"text": ["I'll Attack the Gold Fury!"]
+	},	
+	"vsam": {
+		"text": ["I'll Attack the Titan!"]
+	},	
+	
+	"vsbb": {
+		"text": ["I'm going for jungle buff!"]
+	},	
+	"vsbn": {
+		"text": ["I need the jungle buff."]
+	},	
+	"vsbt": {
+		"text": ["Take this jungle buff."]
+	},	
+	"vsd1": {
+		"text": ["I'll defend left lane!"]
+	},	
+	"vsd2": {
+		"text": ["I'll defend middle lane!"]
+	},	
+	"vsd3": {
+		"text": ["I'll defend right lane!"]
+	},	
+	"vsdd": {
+		"text": ["I'll defend!"]
+	},	
+	"vsdf": {
+		"text": ["I'll defend the Fire Giant!"]
+	},	
+	"vsdg": {
+		"text": ["I'll defend the Gold Fury!"]
+	},	
+	"vsdm": {
+		"text": ["I'll defend the Titan!"]
+	},	
+	"vsg1": {
+		"text": ["I'll gank left lane!"]
+	},	
+	"vsg2": {
+		"text": ["I'll gank middle lane!"]
+	},	
+	"vsg3": {
+		"text": ["I'll gank right lane!"]
+	},	
+	"vsgg": {
+		"text": ["I'll gank!"]
+	},	
+	"vsq1": {
+		"text": ["I will ward left!"]
+	},	
+	"vsq2": {
+		"text": ["I will ward middle!"]
+	},	
+	"vsq3": {
+		"text": ["I will ward right!"]
+	},	
+	"vsqq": {
+		"text": ["I will ward!"]
+	},	
+	"vst1": {
+		"text": ["I'm module.message =ing left lane!"]
+	},	
+	"vst2": {
+		"text": ["I'm module.message =ing middle lane!"]
+	},	
+	"vst3": {
+		"text": ["I'm module.message =ing right lane!"]
+	},	
+	"vstb": {
+		"text": ["I'm module.message =ing to base!"]
+	},	
+	"vstt": {
+		"text": ["I have module.message =ed!"]
+	},	
+	"vt1": {
+		"text": ["Enemies have module.message =ed left!"]
+	},	
+	"vt2": {
+		"text": ["Enemies have module.message =ed middle!"]
+	},	
+	"vt3": {
+		"text": ["Enemies have module.message =ed right!"]
+	},	
+	"vtt": {
+		"text": ["Enemies have module.message =ed!"]
+	},	
+	"vva": {
+		"text": ["Ok!"]
+	},	
+	"vvb": {
+		"text": ["Be right back!"]
+	},	
+	"vvc": {
+		"text": ["Completed!"]
+	},	
+	"vvk": {
+		"text": ["Stepping away for a moment."]
+	},	
+	"vvm": {
+		"text": ["Out of mana!"]
+	},	
+	"vvn": {
+		"text": ["No!"]
+	},	
+	"vvp": {
+		"text": ["Please?"]
+	},	
+	"vvs": {
+		"text": ["Sorry!"]
+	},	
+	"vvt": {
+		"text": ["Thanks!"]
+	},	
+	"vvw": {
+		"text": ["Wait!"]
+	},	
+	"vvx": {
+		"text": ["Cancel that!"]
+	},	
+	"vvy": {
+		"text": ["Yes!"]
+	},	
+	"vvgb": {
+		"text": ["Bye!"]
+	},	
+	"vvgf": {
+		"text": ["Have fun!"]
+	},	
+	"vvgg": {
+		"text": ["Good game!"]
+	},	
+	"vvgh": {
+		"text": ["Hi!"]
+	},	
+	"vvgl": {
+		"text": ["Good luck!"]
+	},	
+	"vvgn": {
+		"text": ["Nice Job!"]
+	},	
+	"vvgo": {
+		"text": ["Oops!"]
+	},	
+	"vvgq": {
+		"text": ["Quiet!"]
+	},	
+	"vvgr": {
+		"text": ["No Problem!"]
+	},	
+	"vvgs": {
+		"text": ["Curses!"]
+	},	
+	"vvgt": {
+		"text": ["That's too bad!"]
+	},	
+	"vvgw": {
+		"text": ["You're welcome!"]
+	},	
+	"vvva": {
+		"text": ["Set up an ambush here!"]
+	},	
+	"vvvb": {
+		"text": ["Behind us!"]
+	},	
+	"vvvc": {
+		"text": ["Chase the enemy!"]
+	},	
+	"vvvd": {
+		"text": ["Ultimate is down!"]
+	},	
+	"vvve": {
+		"text": ["On my way!"]
+	},	
+	"vvvf": {
+		"text": ["Follow me!"]
+	},	
+	"vvvg": {
+		"text": ["Group up!"]
+	},	
+	"vvvj": {
+		"text": ["Going into the jungle!"]
+	},	
+	"vvvp": {
+		"text": ["Split push!"]
+	},	
+	"vvvr": {
+		"text": ["Ultimate is ready!"]
+	},	
+	"vvvs": {
+		"text": ["Stay here!"]
+	},	
+	"vvvt": {
+		"text": ["It's a trap!"]
+	},	
+	"vvvw": {
+		"text": ["Place a Ward for teleport!"]
+	},	
+	"vvvx": {
+		"text": ["Spread Out!"]
+	},
+	"vej": {
+		"text": [
+			"It is not good to point at a rainbow, or your finger will rot!",
+			"It is not good to hit a dog, for he will no longer help you in case you need to pass the flames of a fire.",
+			"It is not good to remove the first layer of the tortillas, or pimples will appear on your face."
+		]
+	},
+	"vet": {
+		"text": [
+			"It is not wise to put a basket on your head or you will be eaten by a dog.",
+			"One finger cannot remove lice from the head.",
+			"Do not throw away your hair, fingernails or teeth because if you don't find them upon your death, you will regret it."
+		]
+	}
+}
