@@ -14,7 +14,7 @@ Important Locations
 
 [IBM Bluemix](https://console.ng.bluemix.net/)
 
-[Node JS](https://nodejs.org/en/)
+[Node.js](https://nodejs.org/en/)
 
 Setup
 ======
