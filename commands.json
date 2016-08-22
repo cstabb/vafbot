@@ -65,6 +65,19 @@
 			}
 		]
 	},
+	"!guns": {
+		"notes"	: "Put some notes here",
+		"help"	: "This command kills Tayne. Long live Tayne!",
+		"permissions" : "",
+		"instructions":	[
+			{
+				"method"	: "uploadFile",
+				"output"	: "resources/img/guns.jpg",
+				"channel"	: null,
+				"override"	: null
+			}
+		]
+	},
 	"!naptime": {
 		"notes"	: "Put some notes here",
 		"help"	: "This command kills Tayne. Long live Tayne!",
